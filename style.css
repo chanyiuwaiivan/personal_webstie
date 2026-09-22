@@ -1,0 +1,217 @@
+/* ===== 基础设置 ===== */
+:root {
+  --accent: #2563eb;        /* 主色：蓝色 */
+  --accent-dark: #1e40af;   /* 深蓝色，用于悬停 */
+  --cream: #fdf6e3;         /* 奶油色背景 */
+  --text: #1f2937;          /* 正文颜色 */
+  --muted: #6b7280;         /* 次要文字颜色 */
+  --card-bg: #ffffff;       /* 卡片背景 */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--cream);
+}
+
+/* ===== 导航栏 ===== */
+.site-header {
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--accent);
+  background-color: #eff6ff;
+}
+
+/* ===== 欢迎区域 ===== */
+.hero {
+  background: linear-gradient(135deg, #dbeafe 0%, #fdf6e3 100%);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-dark);
+}
+
+/* ===== 通用区块 ===== */
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--accent-dark);
+}
+
+.section-intro {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.alt-bg {
+  background-color: #eff6ff;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ===== 卡片 ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.card p {
+  color: var(--muted);
+}
+
+/* ===== 联系区域 ===== */
+#contact a {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#contact a:hover,
+#contact a:focus {
+  color: var(--accent-dark);
+}
+
+/* ===== 页脚 ===== */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ===== 响应式：手机窄屏 ===== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+}
