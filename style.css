@@ -1,12 +1,13 @@
 /* ===== 基础设置 ===== */
+/* ===== 基础设置 ===== */
 :root {
-  --accent: #facc15;        /* 主色：黄色 */
-  --accent-dark: #eab308;   /* 深黄色，用于悬停 */
   --bg: #b91c1c;            /* 页面背景：红色 */
-  --bg-dark: #7f1d1d;       /* 深红色，用于区块 */
-  --card-bg: #991b1b;       /* 卡片背景：稍浅的红 */
-  --text: #fef08a;          /* 正文：浅黄色 */
-  --heading: #facc15;       /* 标题：亮黄色 */
+  --bg-dark: #991b1b;       /* 稍深的红，用于导航/页脚 */
+  --card-bg: #7f1d1d;       /* 卡片背景：深红 */
+  --text: #facc15;          /* 正文：黄色 */
+  --heading: #fde047;       /* 标题：亮黄色 */
+  --accent: #facc15;        /* 强调色：黄色 */
+  --accent-dark: #eab308;   /* 深黄色，用于悬停 */
   --border: #facc15;        /* 边框：黄色 */
 }
 
@@ -77,7 +78,7 @@ body {
 
 /* ===== 欢迎区域 ===== */
 .hero {
-  background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 100%);
+  background-color: var(--bg);
   padding: 4rem 1.5rem;
   text-align: center;
 }
@@ -130,6 +131,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
+  background-color: var(--bg);
 }
 
 .section h2 {
@@ -192,6 +194,7 @@ body {
   text-align: center;
   padding: 1.5rem;
   color: var(--text);
+  background-color: var(--bg-dark);
   font-size: 0.9rem;
 }
 
